@@ -2,6 +2,30 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onChoseLocation($event)">
+  <agm-marker 
+    [latitude]="lat" 
+    [longitude]="lng">
+  </agm-marker>
+  
+  <agm-direction 
+    [origin]="org" 
+    [destination]="dest">
+  </agm-direction>
 </agm-map>
+
+<!-- vanilla javascript map
+<body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAub4P6S9I8vXr95WjIRMQObLIbBUUISUg&callback=initMap" async defer></script>
+</body>
+-->
