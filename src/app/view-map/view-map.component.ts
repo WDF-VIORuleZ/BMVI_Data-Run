@@ -5,10 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './view-map.component.html',
   styleUrls: ['./view-map.component.css']
 })
+
 export class ViewMapComponent implements OnInit {
 
-  constructor() { }
+  title: string = 'My first AGM project';
+  lat: number = 59.678418;
+  lng: number = 7.809007;
 
+  constructor() { }
   ngOnInit() {
   }
 
