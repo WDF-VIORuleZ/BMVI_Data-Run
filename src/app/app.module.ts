@@ -18,17 +18,27 @@ import {
   MatIconModule, 
   MatButton,
   MatHint,
-  MatFormFieldModule} from '@angular/material/';
+  MatFormFieldModule,
+  MatDialogModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatDividerModule} from '@angular/material/';
 import { ViewDashboardComponent } from './view-dashboard/view-dashboard.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { DialogNewCmComponent } from './dialog-new-cm/dialog-new-cm.component';
+import { ViewCmComponent } from './view-cm/view-cm.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewMapComponent,
     ViewHomeComponent,
-    ViewDashboardComponent
+    ViewDashboardComponent,
+    DialogNewCmComponent,
+    ViewCmComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,11 +54,18 @@ import { AgmCoreModule } from '@agm/core';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDividerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAHNmhbDgYVzi5Tz8yLBNzLPuJkTRc1lPI'
     })
   ],
   providers: [],
+  entryComponents: [
+    DialogNewCmComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

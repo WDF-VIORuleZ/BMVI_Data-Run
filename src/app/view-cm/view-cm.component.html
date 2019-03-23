@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+<a style="vertical-align: center; color: white" [routerLink]='["/dashboard"]'><i class="material-icons">arrow_back_ios</i></a>
+</mat-toolbar>
+ 
+
+<mat-card class="example-card">
+    <mat-card-header>
+      
+      <div mat-card-avatar><i class="material-icons">directions_bike</i></div>
+      <mat-card-title >{{this.cms.clicked.start}} - {{this.cms.clicked.end}}</mat-card-title>
+      <mat-card-subtitle>{{this.cms.clicked.owner}}</mat-card-subtitle>
+      
+      <div style="width:100%"></div>
+      <button mat-mini-fab  [ngClass]="{ 'joined': this.cms.clicked.joined, 'unjoined': !this.cms.clicked.joined }"  >{{this.cms.clicked.participants}}</button>
+    </mat-card-header>
+    <img mat-card-image style="max-height: 200px" src="https://img.go-alps.de/img/p/trekking-via-claudia/map.jpg" >
+    <mat-card-content>
+    
+      <p>Description: 
+        {{this.cms.clicked.description}}
+      </p> 
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="this.join_cm()">{{this.btn_label}}</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  
+
+    <!-- [ngClass]="{ 'joined': this.cms.clicked.joined }" 
+        style="margin-top:-8px;margin-right:-3px; font-weight: bolder" mat-mini-fab
+    -->

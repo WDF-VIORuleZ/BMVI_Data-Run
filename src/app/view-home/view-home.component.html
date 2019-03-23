@@ -1,10 +1,22 @@
 
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
 
-<p>
-  view-home works!
-</p>
+
+<mat-toolbar color="primary" style="text-align:center; margin-bottom:5px">
+  <div style="width: 100%">
+  <p style="margin-top:20px; text-align: center; color:white;">
+    BIKEPOOL!
+  </p>
+  </div>
+</mat-toolbar>
+  
+<mat-card class="example-card">
+<mat-card-content><p class="text">Alleine fahren mag ich nicht, drum nehm' ich mir nen ander'n mit. </p>
+</mat-card-content>  
+</mat-card>
+
+<button mat-raised-button style="width:100%; margin-top:10px" [routerLink]="['/dashboard']">weiter</button>
+
+
+
+
+

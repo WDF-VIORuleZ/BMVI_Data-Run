@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu" ><mat-icon>menu</mat-icon> Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item
+      routerLink="/home" routerLinkActive="active">Home</button>
+      <button mat-menu-item
+      routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+      <button mat-menu-item
+      routerLink="/home" routerLinkActive="active">logout</button>
+  </mat-menu>
+  <div style="width:100%"></div>
+  <i class="material-icons">directions_bike</i>
+    <span style="padding-left: 1em">Nico</span>
+  </mat-toolbar>
+   

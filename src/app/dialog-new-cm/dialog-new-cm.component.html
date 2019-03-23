@@ -1,0 +1,25 @@
+
+<h1 mat-dialog-title>New Critical Mass</h1>
+<div mat-dialog-content>
+    <!--<p></p>-->
+
+<mat-form-field class="example-full-width">
+  <input matInput accent="#00ff00" placeholder="From">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="To">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  <!--
+<textarea matInput placeholder="Leave a comment">
+  -->
+</mat-form-field> 
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+    <button style="width:100%" class=dark mat-raised-button color="primary">Add</button>
+
+</div>
