@@ -8,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class ViewMapComponent implements OnInit {
   // For api requests
-  key = 'AIzaSyAub4P6S9I8vXr95WjIRMQObLIbBUUISUg'
+  key = 'AIzaSyAHNmhbDgYVzi5Tz8yLBNzLPuJkTRc1lPI'
   title: string = 'AGM-GMAPS tests';
 
-  public lat: number = 59.678418;
+  public lat: number = 51.678418;
   public lng: number = 7.809007;
 
+  /*
   locationChosen: boolean = false;
 
   // agm-directions
@@ -30,11 +31,11 @@ export class ViewMapComponent implements OnInit {
     this.org = { lat: 24.799448, lng: 120.979021 };
     this.dest = { lat: 24.799524, lng: 120.975017 };
   }
-
+  */
   constructor() { }
 
   ngOnInit() {
-    this.getDirection();
+    //this.getDirection();
   }
 
 }

@@ -31,7 +31,7 @@ import { AgmDirectionModule } from 'agm-direction';   // agm-direction
     CommonModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAub4P6S9I8vXr95WjIRMQObLIbBUUISUg'
+      apiKey: 'AIzaSyAHNmhbDgYVzi5Tz8yLBNzLPuJkTRc1lPI'
     }),
     AgmDirectionModule,
   ],
