@@ -6,7 +6,7 @@ import { ServiceCmService } from '../service-cm.service';
 import { Router } from '@angular/router';
 
 
-declare function getPoints(city1: string, cit2: string, divid:string): any;
+declare function getPoints(city1: string, labelA:string, cit2: string, labelB: string, divid:string): any;
 
 export interface CM {
   id: number;
@@ -52,7 +52,7 @@ export class ViewDashboardComponent implements OnInit {
     for(let i = 0; i < this.cms.cms.length; i++){
       let el = this.cms.cms[i]
       console.log(el)
-      getPoints( el.start , el.end, "divid" + el.id)
+      getPoints( el.start, el.participants.toString(), el.end, "", "divid" + el.id)
     }
     
   }

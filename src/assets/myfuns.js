@@ -1,6 +1,6 @@
 
 
-function getPoints(city1, city2, divid){
+function getPoints(city1, labelA, city2, labelB, divid){
     var geocoder =  new google.maps.Geocoder();
     geocoder.geocode( { 'address': city1}, function(results, status) {
     pointA = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()); 
@@ -8,14 +8,15 @@ function getPoints(city1, city2, divid){
         geocoder.geocode( { 'address': city2}, function(results, status) {
         pointB = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()); 
     
-        initMap(pointA, pointB, divid)
+        console.log("counnnt")
+        initMap(pointA, labelA, pointB, labelB, divid)
     });
     });
 }
 
 var map;
 
-function initMap(pointA, pointB, divid) {
+function initMap(pointA, labelA, pointB, labelB, divid) {
     pointA,
     pointB,
     myOptions = {
@@ -33,14 +34,12 @@ function initMap(pointA, pointB, divid) {
    
     markerA = new google.maps.Marker({
     position: pointA,
-    title: "point A",
-    label: "A",
+    label: labelA,
     map: map
     }),
     markerB = new google.maps.Marker({
     position: pointB,
-    title: "point B",
-    label: "B",
+    label: labelB,
     map: map
     },
     );

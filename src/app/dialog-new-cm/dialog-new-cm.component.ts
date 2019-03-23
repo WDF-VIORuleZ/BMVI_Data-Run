@@ -5,8 +5,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 import { ServiceCmService } from '../service-cm.service';
 
-declare function getPoints(city1: string, cit2: string, divid:string): any;
-
+declare function getPoints(city1: string, labelA:string, cit2: string, labelB: string, divid:string): any;
 
 export interface DialogData {
   animal: string;
@@ -54,7 +53,7 @@ export class DialogNewCmComponent implements OnInit {
 
     let el = this.cms.cms[this.cms.cms.length-1]
     console.log(el)
-    getPoints( el.start + ", Germany", el.end + ", Germany", "divid" + el.id)
+    getPoints( el.start, el.participants.toString(), el.end, "", "divid" + el.id)
 
 
       this.dialogRef.close()
