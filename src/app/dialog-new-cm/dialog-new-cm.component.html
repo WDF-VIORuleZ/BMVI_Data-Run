@@ -1,16 +1,15 @@
-
+<div style="min-width: 90%">
 <h1 mat-dialog-title>New Critical Mass</h1>
-<div mat-dialog-content>
+<div mat-dialog-content >
     <!--<p></p>-->
-
 <mat-form-field class="example-full-width">
-  <input matInput accent="#00ff00" placeholder="From" [(value)]=this.val_from>
+  <input matInput accent="#00ff00" placeholder="From" [(ngModel)]=this.val_from>
 </mat-form-field>
 <mat-form-field class="example-full-width">
-  <input matInput placeholder="To" [(value)]=this.val_to>
+  <input matInput placeholder="To" [(ngModel)]=this.val_to>
 </mat-form-field>
 <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment" [(value)]=this.val_desc></textarea>
+    <textarea matInput placeholder="Leave a comment" [(ngModel)]=this.val_desc></textarea>
   <!--
 <textarea matInput placeholder="Leave a comment">
   -->
@@ -22,4 +21,5 @@
 </mat-form-field>
     <button style="width:100%" (click)=add_cm() class=dark mat-raised-button color="primary">Add</button>
 
+</div>
 </div>

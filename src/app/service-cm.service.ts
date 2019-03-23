@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
 })
 export class ServiceCmService {
   cms = [
-    {id:1, participants: 10, start: "Berlin Hauptbahnhof", end: "Berlin Ostkreuz", owner: "Max", description: "Mit Freunden Brötchen holen.", joined: false, time: "heute, 18.00"},
-    {id:2, participants: 10, start: "Karlsruhe", end: "Karlsruhe-Durlach", owner: "Nico", description: "Kurze Ausfahrt", joined: false, time: "heute, 14.45"},
-    {id:3, participants: 14, start: "Berlin Invalidenplatz", end: "Berlin Alexanderplatz", owner: "Lara", description: "Spree Tourchen gefällig?", joined: false, time: "morgen, 08.15"}];
+    {id:10, participants: 5, start: "Berlin Hauptbahnhof", end: "Berlin Ostkreuz", owner: "Jaque", description: "Suche nette Mitfahrerinnen um die Stadt kennenzulernen! Freu mich schon mequa!!!", joined: false, time: "heute, 14.20"},
+    {id:11, participants: 23, start: "Berlin, Freiheitsstatue", end: "Berlin Kadewe", owner: "Nico", description: "Bisschen Feierabend-Shoppen am kadewe? anyone?", joined: false, time: "heute, 16.45"},
+    {id:12, participants: 14, start: "Berlin, Invalidenplatz", end: "Berlin Alexanderplatz", owner: "Lara", description: "Spree Tourchen gefällig?", joined: false, time: "morgen, 08.15"}];
   
   clicked: CM;
 

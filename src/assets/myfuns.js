@@ -34,12 +34,12 @@ function initMap(pointA, labelA, pointB, labelB, divid) {
    
     markerA = new google.maps.Marker({
     position: pointA,
-    label: labelA,
+    //label: labelA,
     map: map
     }),
     markerB = new google.maps.Marker({
     position: pointB,
-    label: labelB,
+    //label: labelB,
     map: map
     },
     );

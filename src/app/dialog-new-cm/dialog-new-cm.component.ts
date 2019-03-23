@@ -27,7 +27,9 @@ export class DialogNewCmComponent implements OnInit {
   val_to: string = "Berlin";
   val_from: string = "Hamburg";
   val_desc: string = "Beschreibung";
-  val_time: string = "morgen, 10.00";
+  val_time: string = "morgen, 22.00";
+
+
 
 
   constructor(
@@ -40,20 +42,21 @@ export class DialogNewCmComponent implements OnInit {
   }
 
   add_cm(){
-    this.cms.cms.push( {id: (this.cms.cms.length + 1),
+    let tmp = {id: (10-this.cms.cms.length),
       participants: 0,
       start: this.val_from,
       end: this.val_to,
       owner: "Nico",
       description: this.val_desc,
       joined: true,
-      time: this.val_time});
+      time: this.val_time}
+    this.cms.cms.unshift(tmp );
 
     console.log(this.cms.cms)
+    console.log(this.val_to)
 
-    let el = this.cms.cms[this.cms.cms.length-1]
-    console.log(el)
-    getPoints( el.start, el.participants.toString(), el.end, "", "divid" + el.id)
+    console.log(tmp)
+    getPoints( tmp.start, tmp.participants.toString(), tmp.end, "", "divid" + tmp.id)
 
 
       this.dialogRef.close()
