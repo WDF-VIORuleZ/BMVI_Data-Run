@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 declare function getPoints(city1: string, cit2: string, divid:string): any;
 
 export interface CM {
+  id: number;
   participants: number;
   start: string;
   end: string;
