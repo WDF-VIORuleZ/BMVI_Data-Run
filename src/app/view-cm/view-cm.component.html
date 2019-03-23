@@ -4,24 +4,29 @@
  
 
 <mat-card class="example-card">
-    <mat-card-header>
+
+      <mat-card-header> 
+        <div mat-card-avatar style="text-align: center; float: None;"><i class="material-icons">directions_bike</i><br><div style="color: rgba(0,0,0,.54); font-size: smaller; margin-top:-5px">{{this.cms.clicked.owner}}</div></div>
+        <mat-card-title style="font-weight: lighter; display: inline" (click)="clickCms(this.cms.clicked.id)"><p style="margin-bottom: 1px; font-weight: bold; font-size: small; width:20px">von</p>{{this.cms.clicked.start}}</mat-card-title>
+        <mat-card-title style="font-weight: lighter"><p style="margin-bottom: 1px;font-weight: bold; font-size: small; width:20px">nach</p>{{this.cms.clicked.end}}</mat-card-title>
+  
+        <mat-card-subtitle>{{this.cms.clicked.time}} Uhr</mat-card-subtitle>  
+        <div style="width:100%"></div>
+        <button mat-mini-fab  [ngClass]="{ 'joined': this.cms.clicked.joined, 'unjoined': !this.cms.clicked.joined }"  >{{this.cms.clicked.participants}}</button>
+      </mat-card-header>
       
-      <div mat-card-avatar><i class="material-icons">directions_bike</i></div>
-      <mat-card-title >{{this.cms.clicked.start}} - {{this.cms.clicked.end}}</mat-card-title>
-      <mat-card-subtitle>{{this.cms.clicked.owner}}</mat-card-subtitle>
-      
-      <div style="width:100%"></div>
-      <button mat-mini-fab  [ngClass]="{ 'joined': this.cms.clicked.joined, 'unjoined': !this.cms.clicked.joined }"  >{{this.cms.clicked.participants}}</button>
-    </mat-card-header>
-    <img mat-card-image style="max-height: 200px" src="https://img.go-alps.de/img/p/trekking-via-claudia/map.jpg" >
+
+      <p style="margin-top:10px; margin-bottom: 2px; font-weight: bold; font-size: small">Beschreibung:</p><p>
+          {{this.cms.clicked.description}}
+        </p> 
+
+      <div style="height:250px" [id]="'divid'+this.cms.clicked.id.toString()"></div>
+  
     <mat-card-content>
     
-      <p>Description: 
-        {{this.cms.clicked.description}}
-      </p> 
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="this.join_cm()">{{this.btn_label}}</button>
+      <button mat-button color=warn (click)="this.join_cm()">{{this.btn_label}}</button>
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>

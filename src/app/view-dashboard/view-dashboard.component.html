@@ -9,10 +9,12 @@
 
 <div class=cms *ngFor="let cm of this.cms.cms; let i = index">
   <mat-card class="example-card">
-    <mat-card-header>
+    <mat-card-header> 
       <div mat-card-avatar style="text-align: center; float: None;"><i class="material-icons">directions_bike</i><br><div style="color: rgba(0,0,0,.54); font-size: smaller; margin-top:-5px">{{cm.owner}}</div></div>
-      <mat-card-title (click)="clickCms(cm.id)">{{cm.start}} - {{cm.end}}</mat-card-title>
-      <mat-card-subtitle>{{cm.time}} Uhr</mat-card-subtitle>
+      <mat-card-title style="font-weight: lighter; display: inline" (click)="clickCms(cm.id)"><p style="margin-bottom: 1px; font-weight: bold; font-size: small; width:20px">von</p>{{cm.start}}</mat-card-title>
+      <mat-card-title style="font-weight: lighter"><p style="margin-bottom: 1px;font-weight: bold; font-size: small; width:20px">nach</p>{{cm.end}}</mat-card-title>
+
+      <mat-card-subtitle>{{cm.time}} Uhr</mat-card-subtitle>  
     </mat-card-header>
    
     <div style="height:250px" [id]="'divid'+cm.id.toString()"></div>

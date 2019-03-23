@@ -52,7 +52,7 @@ export class ViewDashboardComponent implements OnInit {
     for(let i = 0; i < this.cms.cms.length; i++){
       let el = this.cms.cms[i]
       console.log(el)
-      getPoints( el.start + ", Germany", el.end + ", Germany", "divid" + el.id)
+      getPoints( el.start , el.end, "divid" + el.id)
     }
     
   }

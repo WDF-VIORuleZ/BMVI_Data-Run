@@ -20,14 +20,17 @@ function initMap(pointA, pointB, divid) {
     pointB,
     myOptions = {
     zoom: 7,
-    center: pointA
+    center: pointA,
+    disableDefaultUI: true
     },
-    map = new google.maps.Map(document.getElementById(divid), myOptions),
+        map = new google.maps.Map(document.getElementById(divid), myOptions),
+        
     // Instantiate a directions service.
     directionsService = new google.maps.DirectionsService,
     directionsDisplay = new google.maps.DirectionsRenderer({
     map: map
     }),
+   
     markerA = new google.maps.Marker({
     position: pointA,
     title: "point A",
@@ -39,7 +42,8 @@ function initMap(pointA, pointB, divid) {
     title: "point B",
     label: "B",
     map: map
-    });
+    },
+    );
 
     calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
 
