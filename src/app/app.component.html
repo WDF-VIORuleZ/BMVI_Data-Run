@@ -1,13 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+<mat-toolbar color="primary">
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu" ><mat-icon>menu</mat-icon> Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item
     routerLink="/home" routerLinkActive="active">Home</button>
     <button mat-menu-item
-    routerLink="/map" routerLinkActive="active">Map</button>
+    routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+    <button mat-menu-item
+    routerLink="/login" routerLinkActive="active">Login</button>
+    <button mat-menu-item
+    routerLink="/test" routerLinkActive="active">Test</button>
 </mat-menu>
-
-
+<div style="width:100%"></div>
+<i class="material-icons">directions_bike</i>
+  <span style="padding-left: 1em">Nico</span>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
