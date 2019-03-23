@@ -31,7 +31,7 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 */
 
 body {
-  background-color: #373740;
+  background-color: #737380;
 }
 
 h1 {

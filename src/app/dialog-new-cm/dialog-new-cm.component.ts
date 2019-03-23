@@ -29,9 +29,6 @@ export class DialogNewCmComponent implements OnInit {
   val_desc: string = "Beschreibung";
   val_time: string = "morgen, 22.00";
 
-
-
-
   constructor(
     private cms: ServiceCmService,
     public dialogRef: MatDialogRef<DialogNewCmComponent>,

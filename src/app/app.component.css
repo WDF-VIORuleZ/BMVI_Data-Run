@@ -1,0 +1,17 @@
+#links {
+    width: 12em;
+    float: left;
+    }
+    
+    #mitte {
+    background-color: #373740;
+    padding: 0.5em;
+    margin-left: 12em;
+    margin-right: 12em;
+    height: 800px
+    }
+    
+    #rechts {
+    width: 12em;
+    float: right;
+    }
