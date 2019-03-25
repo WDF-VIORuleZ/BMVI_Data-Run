@@ -29,6 +29,7 @@ import { AgmCoreModule } from '@agm/core';
 import { DialogNewCmComponent } from './dialog-new-cm/dialog-new-cm.component';
 import { ViewCmComponent } from './view-cm/view-cm.component';
 import { HeaderComponent } from './header/header.component';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { HeaderComponent } from './header/header.component';
     MatNativeDateModule,
     MatDividerModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAHNmhbDgYVzi5Tz8yLBNzLPuJkTRc1lPI'
+      apiKey: environment.mapApiKey
     })
   ],
   providers: [],

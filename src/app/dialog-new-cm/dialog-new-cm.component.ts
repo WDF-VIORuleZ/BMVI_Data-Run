@@ -40,7 +40,7 @@ export class DialogNewCmComponent implements OnInit {
 
   add_cm(){
     let tmp = {id: (10-this.cms.cms.length),
-      participants: 0,
+      participants: 1,
       start: this.val_from,
       end: this.val_to,
       owner: "Nico",

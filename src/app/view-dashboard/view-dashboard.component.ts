@@ -16,6 +16,7 @@ export interface CM {
   owner: string;
   description: string;
   joined: boolean;
+  time: string;
 }
 
 @Component({
@@ -44,7 +45,7 @@ export class ViewDashboardComponent implements OnInit {
   }
 
 
-  clickCms(id){
+  clickCms(id): void{
     this.cms.setClicked(id)
   }
 
